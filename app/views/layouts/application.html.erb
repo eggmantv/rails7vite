@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <div id="root"></div>
+    <% if Rails.env.development? %>
+      <script type="module" src="http://localhost:3036/@vite/client"></script>
+      <script type="module">
+        import RefreshRuntime from 'http://localhost:3036/@react-refresh'
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$RefreshReg$ = () => {}
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+      </script>
+    <% end %>
     <%= yield %>
+    <%= vite_include_tag "js", "main" %>
   </body>
 </html>
