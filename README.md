@@ -1,24 +1,19 @@
-# README
+Rails 7 + Vite + MongoDB + Docker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setup
 
-Things you may want to cover:
+You need to install ruby first, you can use [rbenv](https://github.com/rbenv/rbenv), and make sure you have latest version of nodejs and yarn installed already.
 
-* Ruby version
+Clone this project, then run:
 
-* System dependencies
+```shell
+bundle
+cd vite
+yarn
+```
 
-* Configuration
+Then start development daemons:
 
-* Database creation
+```shell
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
