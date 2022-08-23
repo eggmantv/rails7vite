@@ -1,9 +1,9 @@
 module ApplicationHelper
   def vite_include_tag type, *assets
     asset_path = if Rails.env.development?
-      "http://#{request.host}:#{3036}/src"
+      "//#{request.host}:#{3036}/src"
     else
-      "//www.presensafety.com"
+      "//www.yourdomain.com"
     end
 
     # asset_path = "http://localhost:5009"
