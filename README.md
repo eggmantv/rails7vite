@@ -1,8 +1,12 @@
-Rails 7 + Vite + React + Docker
+# Rails 7 + Vite + React + Docker
 
-# Setup
+This project is a scaffold to help you easily and quickly to create your own Ruby on Rails 7 project with Vite, React and Docker support.
 
-You need to install ruby first, you can use [rbenv](https://github.com/rbenv/rbenv), and make sure you have latest version of nodejs and yarn installed already.
+Comparing with webpack, Vite is a super fast and easy-to-use **Next Generation Frontend Tooling**, learn more [vite](https://github.com/vitejs/vite).
+
+## Setup
+
+You need to install ruby 3.x first, you can use [rbenv](https://github.com/rbenv/rbenv), and make sure you have latest version of nodejs and yarn installed already.
 
 Clone this project, then run:
 
@@ -22,7 +26,7 @@ Then start development daemons:
 
 then open http://localhost:5100 in your browser.
 
-# Development
+## Development
 
 - Database
 
@@ -65,7 +69,7 @@ we already create a demo with the *WelcomeController* and its view, you can foll
 
 > All your javascript entry files should be placed under **vite/src/packs** directory.
 
-# Build & Deployment
+## Build & Deployment
 
 - Build docker images
 
@@ -81,7 +85,7 @@ If you are building images at Apple silicon(M1, M2 etc.) for linux, you need to 
 
 - If you want to run docker image locally:
 
-You can run with docker-compose.yml or use **docker run ** directly:
+You can run with docker-compose.yml or use **docker run** directly:
 
 ```shell
 docker run --rm -it -p 5100:5100 \
@@ -91,6 +95,6 @@ docker run --rm -it -p 5100:5100 \
 you may need to adjust the environment variables by your needs.
 
 
-# Roadmap
+## Roadmap
 
 - Add a script to rename project, which will save some time after cloning this project and has a need to change the project name.
