@@ -4,6 +4,7 @@ require "active_support/core_ext/integer/time"
 # test suite. You never need to work with it otherwise. Remember that
 # your test database is "scratch space" for the test suite and is wiped
 # and recreated between test runs. Don't rely on the data there!
+ENV['RAILS_MONGODB_HOST'] = "mongodb://localhost:27017,localhost:27018/rails7vite_test"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.

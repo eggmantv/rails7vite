@@ -28,21 +28,9 @@ then open http://localhost:5100 in your browser.
 
 ## Development
 
-- Database
-
-This project is shipped with MongoDB by default, you can change it to other SQL databases if you want.
-
-- Puma
-
-Puma config file is *config/puma.rb*, you can search 5100(default port) through the project to change the default port.
-
-- Vite port
-
-The default vite port for local development is *3036*, you can search it through the whole project if you want a modify.
-
 - Add more entry files
 
-Just change *vite.config.js* file under vite directory:
+Assets(javascript, css, images, etc.) are under vite directory, if you want add more javascript entry files just change *vite.config.js*:
 
 ```javascript
 ....
@@ -53,7 +41,7 @@ build: {
       input: [
         "./src/packs/app.jsx",
         "./src/packs/home/index.jsx",
-        "./src/packs/other/new/entry/file.jsx", // add here
+        "./src/packs/other/new/entry/file.jsx", // new entry file here
       ]
     }
   }
@@ -68,6 +56,30 @@ and then use the helper method in your view:
 we already create a demo with the *WelcomeController* and its view, you can follow it to see how it works. (which will also show you how to use CSS and images)
 
 > All your javascript entry files should be placed under **vite/src/packs** directory.
+
+- Database
+
+This project is shipped with MongoDB by default, you can change it to other SQL databases if you want.
+
+- Puma
+
+Puma config file is *config/puma.rb*, you can search 5100(default port) through the project to change the default port.
+
+- Vite port
+
+The default vite port for local development is *3036*, you can search it through the whole project if you want a modify.
+
+- master key
+
+For convenient, this project commited the *master.key*, which is not recommended for your own project, please re-generate the master.key after cloned and ignore it from your git repository:
+
+```shell
+rm -f config/master.key
+rm -f config/credentials.yml.enc
+EDITOR="vim" bin/rails credentials:edit # just save, no need editing
+git rm --cached config/master.key
+# then edit .gitignore and add the master.key to it.
+```
 
 ## Build & Deployment
 
@@ -93,7 +105,6 @@ docker run --rm -it -p 5100:5100 \
 ```
 
 you may need to adjust the environment variables by your needs.
-
 
 ## Roadmap
 
