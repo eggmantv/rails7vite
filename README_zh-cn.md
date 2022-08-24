@@ -28,21 +28,9 @@ yarn
 
 ## 开发
 
-- 数据库
-
-本项目默认自带 MongoDB，如果需要，你可以将其更改为其他 SQL 数据库。
-
-- Puma
-
-puma 配置文件为 _config/puma.rb_，可以通过搜索本项目 5100（默认端口）来更改默认端口。
-
-- Vite 端口
-
-本地开发的默认 vite 端口是 _3036_，如果需要修改可以在整个项目中搜索。
-
 - 添加更多入口文件
 
-只需更改 vite 目录下的 _vite.config.js_ 文件：
+Assets（javascript、css、图像等）在 vite 目录下，如果你想添加更多的 javascript 入口文件，只需更改 _vite.config.js_：
 
 ```javascript
 ....
@@ -68,6 +56,30 @@ build: {
 我们已经使用 _WelcomeController_ 及其视图创建了一个演示，你可以按照它来查看它是如何工作的。（还将向你展示如何使用 CSS 和图像）
 
 > 你所有的 javascript 入口文件都应该放在 **vite/src/packs** 目录下。
+
+- 数据库
+
+本项目默认自带 MongoDB，如果需要，你可以将其更改为其他 SQL 数据库。
+
+- Puma
+
+Puma 配置文件为 _config/puma.rb_，可以通过搜索本项目 5100（默认端口）来更改默认端口。
+
+- Vite 端口
+
+本地开发的默认 vite 端口是 _3036_，如果需要修改可以在整个项目中搜索。
+
+- master key
+
+为方便起见，本项目提交了 _master.key_，不建议您自己的项目使用，请在克隆后重新生成 master.key，并从您的 git 仓库中忽略它：
+
+```shell
+rm -f config/master.key
+rm -f config/credentials.yml.enc
+EDITOR="vim" bin/rails credentials:edit # 只需保存，无需编辑
+git rm --cached config/master.key
+# 然后编辑 .gitignore 并将 master.key 添加到其中。
+```
 
 ## 构建和部署
 
