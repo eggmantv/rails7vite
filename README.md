@@ -62,7 +62,7 @@ build: {
 and then use the helper method in your view:
 
 ```ruby
-<%= vite_include_tag "js", "other/new/entry/file.jsx"
+<%= vite_include_tag "js", "other/new/entry/file.jsx" %>
 ```
 
 we already create a demo with the *WelcomeController* and its view, you can follow it to see how it works.
