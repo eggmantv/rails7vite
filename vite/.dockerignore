@@ -1,0 +1,4 @@
+.git
+*.log
+node_modules/
+dist/

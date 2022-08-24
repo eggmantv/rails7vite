@@ -1,9 +1,10 @@
 module ApplicationHelper
+  # type: css | js
   def vite_include_tag type, *assets
     asset_path = if Rails.env.development?
-      "//#{request.host}:#{3036}/src"
+      "//#{request.host}:#{3036}/src/packs"
     else
-      "//www.yourdomain.com"
+      "//#{request.host_with_port}"
     end
 
     # asset_path = "http://localhost:5009"

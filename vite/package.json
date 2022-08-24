@@ -16,6 +16,10 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-smart-import": "^0.7.6",
     "vite": "^3.0.7"
   }
 }

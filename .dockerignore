@@ -1,0 +1,9 @@
+.git
+*.log
+log/
+tmp/
+node_modules/
+public/assets
+public/packs
+parcel
+vite

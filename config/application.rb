@@ -30,7 +30,7 @@ module Rails7vite
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.time_zone = 'Beijing'
+    config.time_zone = 'UTC'
 
     # config.generators do |g|
     #   g.orm :mongoid

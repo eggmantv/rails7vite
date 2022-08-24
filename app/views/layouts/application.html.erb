@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= vite_include_tag "css", "app" %>
   </head>
 
   <body>
@@ -21,7 +21,8 @@
         window.__vite_plugin_react_preamble_installed__ = true
       </script>
     <% end %>
+    <%= vite_include_tag "js", "app" %>
+    
     <%= yield %>
-    <%= vite_include_tag "js", "main" %>
   </body>
 </html>

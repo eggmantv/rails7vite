@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  rails7vite:
+    image: rails7vite:latest
+    restart: always
+    # deploy:
+    #   replicas: 1
+    env_file:
+      - docker.env
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+    volumes:
+      - /var/log/rails7vite:/app/rails7vite/log
+      - /var/www/data/rails7vite/public:/www
+    # remove old volume data, include hidden files
+    command: bash -c "rm -rf /www/*; rm -rf /www/.* 2> /dev/null; cp -rfT /app/rails7vite/public /www; rm -f tmp/pids/puma.pid && bundle exec puma -e production -C config/puma.rb"
+
+networks:
+  backend:
+    name: cloud_network
+    driver: bridge
