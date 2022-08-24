@@ -1,3 +1,5 @@
+English | [简体中文](./README.zh-CN.md)
+
 # Rails 7 + Vite + React + Docker
 
 This project is a scaffold to help you easily and quickly to create your own Ruby on Rails 7 project with Vite, React and Docker support.
@@ -30,7 +32,7 @@ then open http://localhost:5100 in your browser.
 
 - Add more entry files
 
-Assets(javascript, css, images, etc.) are under vite directory, if you want add more javascript entry files just change *vite.config.js*:
+Assets(javascript, css, images, etc.) are under vite directory, if you want add more javascript entry files just change _vite.config.js_:
 
 ```javascript
 ....
@@ -53,7 +55,7 @@ and then use the helper method in your view:
 <%= vite_include_tag "js", "other/new/entry/file.jsx" %>
 ```
 
-we already create a demo with the *WelcomeController* and its view, you can follow it to see how it works. (which will also show you how to use CSS and images)
+we already create a demo with the _WelcomeController_ and its view, you can follow it to see how it works. (which will also show you how to use CSS and images)
 
 > All your javascript entry files should be placed under **vite/src/packs** directory.
 
@@ -63,15 +65,15 @@ This project is shipped with MongoDB by default, you can change it to other SQL 
 
 - Puma
 
-Puma config file is *config/puma.rb*, you can search 5100(default port) through the project to change the default port.
+Puma config file is _config/puma.rb_, you can search 5100(default port) through the project to change the default port.
 
 - Vite port
 
-The default vite port for local development is *3036*, you can search it through the whole project if you want a modify.
+The default vite port for local development is _3036_, you can search it through the whole project if you want a modify.
 
 - master key
 
-For convenient, this project commited the *master.key*, which is not recommended for your own project, please re-generate the master.key after cloned and ignore it from your git repository:
+For convenient, this project commited the _master.key_, which is not recommended for your own project, please re-generate the master.key after cloned and ignore it from your git repository:
 
 ```shell
 rm -f config/master.key
@@ -89,7 +91,7 @@ git rm --cached config/master.key
 ./docker-build.sh
 ```
 
-and then, you can push the image to your registry server. You can change the image name if you want. you can also put the docker push command to the end of the *docker-build.sh* script to save some time.
+and then, you can push the image to your registry server. You can change the image name if you want. you can also put the docker push command to the end of the _docker-build.sh_ script to save some time.
 
 - Apple M1 & M2
 

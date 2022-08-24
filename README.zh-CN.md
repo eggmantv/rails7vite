@@ -1,3 +1,5 @@
+[English](./README.md) | 简体中文
+
 # Rails 7 + Vite + React + Docker
 
 这个项目是一个脚手架，可以帮助你轻松快速地创建自己的 Ruby on Rails 7 项目，并支持 Vite、React 和 Docker。
