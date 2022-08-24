@@ -69,6 +69,18 @@ we already create a demo with the *WelcomeController* and its view, you can foll
 
 > All your javascript entry files should be placed under **vite/src/packs** directory.
 
+- master key
+
+For convenient, this project commited the *master.key*, which is not recommended for your own project, please re-generate the master.key after cloned and ignore it from your git repository:
+
+```shell
+rm -f config/master.key
+rm -f config/credentials.yml.enc
+EDITOR="vim" bin/rails credentials:edit # just save, no need editing
+git rm --cached config/master.key
+# then edit .gitignore and add the master.key to it.
+```
+
 ## Build & Deployment
 
 - Build docker images
@@ -93,7 +105,6 @@ docker run --rm -it -p 5100:5100 \
 ```
 
 you may need to adjust the environment variables by your needs.
-
 
 ## Roadmap
 
