@@ -65,7 +65,7 @@ and then use the helper method in your view:
 <%= vite_include_tag "js", "other/new/entry/file.jsx" %>
 ```
 
-we already create a demo with the *WelcomeController* and its view, you can follow it to see how it works.
+we already create a demo with the *WelcomeController* and its view, you can follow it to see how it works. (which will also show you how to use CSS and images)
 
 > All your javascript entry files should be placed under **vite/src/packs** directory.
 
