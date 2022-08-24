@@ -108,6 +108,6 @@ docker run --rm -it -p 5100:5100 \
 
 you may need to adjust the environment variables by your needs.
 
-## Roadmap
+## Follow us
 
-- Add a script to rename project, which will save some time after cloning this project and has a need to change the project name.
+For more turorials and dev videos, you can follow us here [重力不足](https://space.bilibili.com/25990460)，cheers:)
